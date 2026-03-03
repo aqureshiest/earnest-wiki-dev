@@ -12,14 +12,14 @@ export interface WikiMetadata {
 
 export const wikis: WikiMetadata[] = [
   {
-    slug: 'aqureshiest-nano-task-manager',
-    owner: 'aqureshiest',
-    repo: 'nano-task-manager',
-    title: 'Nano Task Manager',
-    description: 'Minimal educational task management web app demonstrating basic Flask + vanilla JS architecture.',
-    generatedAt: '2026-03-03',
-    pageCount: 9,
-    url: '/wikis/aqureshiest-nano-task-manager/'
+    "slug": "aqureshiest-nano-task-manager",
+    "owner": "aqureshiest",
+    "repo": "nano-task-manager",
+    "title": "aqureshiest/nano-task-manager",
+    "description": "# Nano Task Manager - Repository Knowledge\n\n## Project Identity\nMinimal educational task management web app demonstrating basic Flask + vanilla JS architecture.",
+    "generatedAt": "2026-03-03",
+    "pageCount": 9,
+    "url": "/wikis/aqureshiest-nano-task-manager/"
   }
 ];
 

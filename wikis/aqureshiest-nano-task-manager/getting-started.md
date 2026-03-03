@@ -3,6 +3,21 @@ title: Getting Started
 description: tutorial documentation
 ---
 
+<div style="border-bottom: 1px solid var(--vp-c-divider); padding-bottom: 1rem; margin-bottom: 2rem;">
+  <h1 style="margin-bottom: 0.5rem;">Getting Started</h1>
+  <div style="display: flex; gap: 1rem; flex-wrap: wrap; font-size: 0.9rem; color: var(--vp-c-text-2);">
+    <span style="display: flex; align-items: center; gap: 0.25rem;">
+      🎓 <strong>Tutorial</strong>
+    </span>
+    <span style="display: flex; align-items: center; gap: 0.25rem;">
+      📝 <strong>489</strong> words
+    </span>
+    <span style="display: flex; align-items: center; gap: 0.25rem;">
+      ⏱️ <strong>3</strong> min read
+    </span>
+  </div>
+</div>
+
 # Getting Started
 
 This guide walks you through running the Nano Task Manager application in minutes. The application is a lightweight, in-memory task management system with no external database dependencies.

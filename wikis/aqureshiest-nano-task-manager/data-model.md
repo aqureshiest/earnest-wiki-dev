@@ -3,6 +3,21 @@ title: Data Model
 description: reference documentation
 ---
 
+<div style="border-bottom: 1px solid var(--vp-c-divider); padding-bottom: 1rem; margin-bottom: 2rem;">
+  <h1 style="margin-bottom: 0.5rem;">Data Model</h1>
+  <div style="display: flex; gap: 1rem; flex-wrap: wrap; font-size: 0.9rem; color: var(--vp-c-text-2);">
+    <span style="display: flex; align-items: center; gap: 0.25rem;">
+      📚 <strong>Reference</strong>
+    </span>
+    <span style="display: flex; align-items: center; gap: 0.25rem;">
+      📝 <strong>304</strong> words
+    </span>
+    <span style="display: flex; align-items: center; gap: 0.25rem;">
+      ⏱️ <strong>2</strong> min read
+    </span>
+  </div>
+</div>
+
 # Data Model
 
 The task object is the core data structure in nano-task-manager. This page describes its schema, storage mechanism, and lifecycle.

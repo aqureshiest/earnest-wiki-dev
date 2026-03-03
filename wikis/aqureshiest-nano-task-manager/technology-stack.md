@@ -3,6 +3,21 @@ title: Technology Stack
 description: reference documentation
 ---
 
+<div style="border-bottom: 1px solid var(--vp-c-divider); padding-bottom: 1rem; margin-bottom: 2rem;">
+  <h1 style="margin-bottom: 0.5rem;">Technology Stack</h1>
+  <div style="display: flex; gap: 1rem; flex-wrap: wrap; font-size: 0.9rem; color: var(--vp-c-text-2);">
+    <span style="display: flex; align-items: center; gap: 0.25rem;">
+      📚 <strong>Reference</strong>
+    </span>
+    <span style="display: flex; align-items: center; gap: 0.25rem;">
+      📝 <strong>449</strong> words
+    </span>
+    <span style="display: flex; align-items: center; gap: 0.25rem;">
+      ⏱️ <strong>3</strong> min read
+    </span>
+  </div>
+</div>
+
 # Technology Stack
 
 Nano Task Manager is built on a deliberately minimal technology stack designed for simplicity and rapid development. The project uses only essential technologies with no build tools, bundlers, or databases.

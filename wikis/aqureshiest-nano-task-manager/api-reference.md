@@ -3,6 +3,21 @@ title: API Reference
 description: api documentation
 ---
 
+<div style="border-bottom: 1px solid var(--vp-c-divider); padding-bottom: 1rem; margin-bottom: 2rem;">
+  <h1 style="margin-bottom: 0.5rem;">API Reference</h1>
+  <div style="display: flex; gap: 1rem; flex-wrap: wrap; font-size: 0.9rem; color: var(--vp-c-text-2);">
+    <span style="display: flex; align-items: center; gap: 0.25rem;">
+      ⚡ <strong>Api</strong>
+    </span>
+    <span style="display: flex; align-items: center; gap: 0.25rem;">
+      📝 <strong>519</strong> words
+    </span>
+    <span style="display: flex; align-items: center; gap: 0.25rem;">
+      ⏱️ <strong>3</strong> min read
+    </span>
+  </div>
+</div>
+
 # API Reference
 
 The Nano Task Manager exposes a REST API for managing tasks. All endpoints use JSON for request and response bodies and are served by a Flask backend running on port 3000.
