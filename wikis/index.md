@@ -4,12 +4,13 @@ Browse comprehensive AI-generated documentation for various GitHub repositories.
 
 <script setup>
 import { data as wikis } from '../.vitepress/wikis.data.ts'
+import { withBase } from 'vitepress'
 </script>
 
 <div v-if="wikis && wikis.length > 0" class="wikis-list">
   <div v-for="wiki in wikis" :key="wiki.slug" class="wiki-item">
     <h2>
-      <a :href="wiki.url">{{ wiki.title }}</a>
+      <a :href="withBase(wiki.url)">{{ wiki.title }}</a>
     </h2>
     <div class="wiki-info">
       <span class="repo-link">

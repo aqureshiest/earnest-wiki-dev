@@ -30,6 +30,7 @@ features:
 
 <script setup>
 import { data as wikis } from './.vitepress/wikis.data.ts'
+import { withBase } from 'vitepress'
 </script>
 
 <div class="wikis-section">
@@ -40,7 +41,7 @@ import { data as wikis } from './.vitepress/wikis.data.ts'
   <div v-for="wiki in wikis" :key="wiki.slug" class="wiki-card">
     <div class="wiki-card-header">
       <h3>
-        <a :href="wiki.url">{{ wiki.title }}</a>
+        <a :href="withBase(wiki.url)">{{ wiki.title }}</a>
       </h3>
       <div class="wiki-meta">
         <span class="wiki-repo">
@@ -52,7 +53,7 @@ import { data as wikis } from './.vitepress/wikis.data.ts'
       </div>
     </div>
     <p class="wiki-description">{{ wiki.description }}</p>
-    <a :href="wiki.url" class="wiki-link">
+    <a :href="withBase(wiki.url)" class="wiki-link">
       View Documentation →
     </a>
   </div>
