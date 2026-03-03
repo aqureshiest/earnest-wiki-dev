@@ -1,0 +1,63 @@
+# Nano Task Manager - Repository Knowledge
+
+## Project Identity
+Minimal educational task management web app demonstrating basic Flask + vanilla JS architecture. Not production-ready.
+
+## Architecture Pattern
+Classic client-server with in-memory storage:
+- **Backend**: Flask app (app.py) - 5 routes, RESTful API, CORS enabled
+- **Frontend**: Single HTML file (static/index.html) - embedded CSS/JS, no build process
+- **Data**: Python list in memory, auto-increment IDs via global counter
+
+## Key Technical Decisions
+1. **No persistence**: Tasks stored in `tasks = []` list, lost on restart
+2. **No validation**: Minimal error handling, assumes valid inputs
+3. **Monolithic frontend**: All HTML/CSS/JS in one file for simplicity
+4. **Debug mode**: Hardcoded `debug=True, port=3000` in startup
+5. **CORS enabled**: Flask-CORS with default settings for cross-origin access
+
+## File Structure (2 files total)
+- `app.py`: Flask backend (~50 lines)
+- `static/index.html`: Frontend (~150 lines with embedded styles/scripts)
+
+## Data Model
+Task object: `{id: int, text: str, completed: bool}`
+- ID generation: Global `task_id_counter` incremented on each POST
+- No validation on text field
+- Completed defaults to False
+
+## API Contract
+- POST /tasks: `{text: str}` → `{id, text, completed}`
+- GET /tasks: → `[{id, text, completed}, ...]`
+- PUT /tasks/<id>: → `{id, text, completed}` (toggles completed)
+- DELETE /tasks/<id>: → `{message: str}`
+- GET /: Serves static/index.html
+
+## Frontend Patterns
+- Fetch API for all HTTP requests
+- `loadTasks()` called after every mutation to refresh UI
+- Task rendering: Dynamic DOM manipulation with event listeners
+- Styling: Inline CSS with strikethrough for completed tasks
+
+## Dependencies
+- Flask (web framework)
+- Flask-CORS (cross-origin support)
+- No package.json, requirements.txt, or lock files observed
+
+## Limitations & Assumptions
+- Single-threaded: Race conditions possible with concurrent requests
+- No authentication or authorization
+- No input sanitization or XSS protection
+- No rate limiting or request validation
+- Data volatility: Restart = data loss
+- No tests, CI/CD, or deployment configs
+
+## Extension Points
+To make production-ready, would need:
+1. Database integration (SQLite/PostgreSQL)
+2. Input validation and error handling
+3. Authentication/authorization
+4. Persistent storage
+5. Environment-based configuration
+6. Test coverage
+7. Production WSGI server (Gunicorn/uWSGI)
