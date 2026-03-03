@@ -1,9 +1,15 @@
 import { defineConfig } from 'vitepress'
+import { withMermaid } from 'vitepress-plugin-mermaid'
 
-export default defineConfig({
+export default withMermaid(defineConfig({
   title: 'Earnest Wikis',
   description: 'AI-generated documentation for GitHub repositories',
   base: '/earnest-wiki-dev/',
+
+  // Mermaid configuration
+  mermaid: {
+    // Optional: configure mermaid theme and other options
+  },
 
   themeConfig: {
     sidebar: {
@@ -89,4 +95,4 @@ export default defineConfig({
       copyright: 'Copyright © 2024-present'
     }
   }
-})
+}))
