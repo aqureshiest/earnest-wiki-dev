@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'Earnest Wikis',
   description: 'AI-generated documentation for GitHub repositories',
+  base: '/earnest-wiki-dev/',
 
   themeConfig: {
     nav: [
