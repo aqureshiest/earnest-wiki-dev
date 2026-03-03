@@ -107,13 +107,3 @@ import { data as wikis } from '../.vitepress/wikis.data.ts'
   }
 }
 </style>
-
-
-
-### [meetearnest/pricing-service-v2](./meetearnest-pricing-service-v2/)
-**Repository:** [meetearnest/pricing-service-v2](https://github.com/meetearnest/pricing-service-v2)
-
-Comprehensive documentation for this repository.
-
----
-
