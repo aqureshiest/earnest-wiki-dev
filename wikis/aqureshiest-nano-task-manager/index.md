@@ -6,7 +6,7 @@ This documentation was automatically generated from the repository codebase.
 
 - **Repository**: [aqureshiest/nano-task-manager](https://github.com/aqureshiest/nano-task-manager)
 - **Branch**: main
-- **Generated**: 3/2/2026
+- **Generated**: 3/3/2026
 - **Total Pages**: 9
 
 ## Quick Links
@@ -19,11 +19,11 @@ This documentation was automatically generated from the repository codebase.
 ## All Pages
 
 - [Project Overview](./overview.md) - overview
-- [Getting Started](./getting-started.md) - tutorial
-- [Architecture & Design](./architecture.md) - architecture
-- [Technology Stack](./technology-stack.md) - reference
 - [Data Model](./data-model.md) - reference
+- [Architecture & Design](./architecture.md) - architecture
 - [API Reference](./api-reference.md) - api
+- [Getting Started](./getting-started.md) - tutorial
+- [Technology Stack](./technology-stack.md) - reference
 - [Backend Implementation](./backend-structure.md) - guide
 - [Frontend Implementation](./frontend-structure.md) - guide
 - [Limitations & Considerations](./limitations-and-future.md) - reference
