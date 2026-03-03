@@ -12,6 +12,9 @@ hero:
     - theme: brand
       text: Browse All Wikis
       link: /wikis/
+    - theme: alt
+      text: Generate Wiki
+      link: https://github.com/meetearnest/earnest-ai-tools
 ---
 
 <script setup>
@@ -111,7 +114,6 @@ import { withBase } from 'vitepress'
   gap: 1rem;
   padding: 1.5rem;
   border-bottom: 1px solid var(--vp-c-divider);
-  transition: background-color 0.2s ease;
   align-items: center;
 }
 
@@ -119,9 +121,6 @@ import { withBase } from 'vitepress'
   border-bottom: none;
 }
 
-.table-row:hover {
-  background: var(--vp-c-bg);
-}
 
 .col-repo {
   display: flex;
@@ -197,7 +196,7 @@ import { withBase } from 'vitepress'
 
 .view-button {
   padding: 0.5rem 1rem;
-  background: var(--vp-c-brand);
+  background: var(--vp-c-brand-3);
   color: white;
   text-decoration: none;
   border-radius: 6px;
@@ -208,8 +207,7 @@ import { withBase } from 'vitepress'
 }
 
 .view-button:hover {
-  background: var(--vp-c-brand-dark);
-  transform: translateX(2px);
+  background: var(--vp-c-brand-soft);
 }
 
 .no-wikis {
