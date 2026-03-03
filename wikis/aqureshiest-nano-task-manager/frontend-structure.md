@@ -3,6 +3,21 @@ title: Frontend Implementation
 description: guide documentation
 ---
 
+<div style="border-bottom: 1px solid var(--vp-c-divider); padding-bottom: 1rem; margin-bottom: 2rem;">
+  <h1 style="margin-bottom: 0.5rem;">Frontend Implementation</h1>
+  <div style="display: flex; gap: 1rem; flex-wrap: wrap; font-size: 0.9rem; color: var(--vp-c-text-2);">
+    <span style="display: flex; align-items: center; gap: 0.25rem;">
+      📖 <strong>Guide</strong>
+    </span>
+    <span style="display: flex; align-items: center; gap: 0.25rem;">
+      📝 <strong>826</strong> words
+    </span>
+    <span style="display: flex; align-items: center; gap: 0.25rem;">
+      ⏱️ <strong>5</strong> min read
+    </span>
+  </div>
+</div>
+
 # Frontend Implementation
 
 The frontend of nano-task-manager is a single static HTML file (`static/index.html`) that contains all markup, styling, and client-side logic in one self-contained unit. There are no build tools, bundlers, or external dependencies—the application runs directly in the browser with vanilla JavaScript.

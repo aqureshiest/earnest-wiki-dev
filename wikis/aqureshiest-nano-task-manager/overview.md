@@ -3,6 +3,21 @@ title: Project Overview
 description: overview documentation
 ---
 
+<div style="border-bottom: 1px solid var(--vp-c-divider); padding-bottom: 1rem; margin-bottom: 2rem;">
+  <h1 style="margin-bottom: 0.5rem;">Project Overview</h1>
+  <div style="display: flex; gap: 1rem; flex-wrap: wrap; font-size: 0.9rem; color: var(--vp-c-text-2);">
+    <span style="display: flex; align-items: center; gap: 0.25rem;">
+      🏠 <strong>Overview</strong>
+    </span>
+    <span style="display: flex; align-items: center; gap: 0.25rem;">
+      📝 <strong>428</strong> words
+    </span>
+    <span style="display: flex; align-items: center; gap: 0.25rem;">
+      ⏱️ <strong>3</strong> min read
+    </span>
+  </div>
+</div>
+
 # Project Overview
 
 **nano-task-manager** is a minimal web-based task management application designed as an educational and demonstration project. It provides a straightforward interface for creating, viewing, toggling, and deleting tasks through a simple client-server architecture.

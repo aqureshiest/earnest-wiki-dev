@@ -3,6 +3,21 @@ title: Architecture & Design
 description: architecture documentation
 ---
 
+<div style="border-bottom: 1px solid var(--vp-c-divider); padding-bottom: 1rem; margin-bottom: 2rem;">
+  <h1 style="margin-bottom: 0.5rem;">Architecture & Design</h1>
+  <div style="display: flex; gap: 1rem; flex-wrap: wrap; font-size: 0.9rem; color: var(--vp-c-text-2);">
+    <span style="display: flex; align-items: center; gap: 0.25rem;">
+      🏗️ <strong>Architecture</strong>
+    </span>
+    <span style="display: flex; align-items: center; gap: 0.25rem;">
+      📝 <strong>695</strong> words
+    </span>
+    <span style="display: flex; align-items: center; gap: 0.25rem;">
+      ⏱️ <strong>4</strong> min read
+    </span>
+  </div>
+</div>
+
 # Architecture & Design
 
 Nano Task Manager follows a straightforward client-server architecture with a Flask backend serving a single-page frontend application. The system prioritizes simplicity and immediate responsiveness over persistence, making it suitable for temporary task management within a single session.
