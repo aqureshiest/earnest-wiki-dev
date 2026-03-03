@@ -10,15 +10,13 @@ description: api documentation
       ⚡ <strong>Api</strong>
     </span>
     <span style="display: flex; align-items: center; gap: 0.25rem;">
-      📝 <strong>519</strong> words
+      📝 <strong>517</strong> words
     </span>
     <span style="display: flex; align-items: center; gap: 0.25rem;">
       ⏱️ <strong>3</strong> min read
     </span>
   </div>
 </div>
-
-# API Reference
 
 The Nano Task Manager exposes a REST API for managing tasks. All endpoints use JSON for request and response bodies and are served by a Flask backend running on port 3000.
 

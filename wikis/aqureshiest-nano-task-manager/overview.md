@@ -10,15 +10,13 @@ description: overview documentation
       🏠 <strong>Overview</strong>
     </span>
     <span style="display: flex; align-items: center; gap: 0.25rem;">
-      📝 <strong>428</strong> words
+      📝 <strong>426</strong> words
     </span>
     <span style="display: flex; align-items: center; gap: 0.25rem;">
       ⏱️ <strong>3</strong> min read
     </span>
   </div>
 </div>
-
-# Project Overview
 
 **nano-task-manager** is a minimal web-based task management application designed as an educational and demonstration project. It provides a straightforward interface for creating, viewing, toggling, and deleting tasks through a simple client-server architecture.
 

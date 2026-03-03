@@ -10,15 +10,13 @@ description: architecture documentation
       🏗️ <strong>Architecture</strong>
     </span>
     <span style="display: flex; align-items: center; gap: 0.25rem;">
-      📝 <strong>695</strong> words
+      📝 <strong>692</strong> words
     </span>
     <span style="display: flex; align-items: center; gap: 0.25rem;">
       ⏱️ <strong>4</strong> min read
     </span>
   </div>
 </div>
-
-# Architecture & Design
 
 Nano Task Manager follows a straightforward client-server architecture with a Flask backend serving a single-page frontend application. The system prioritizes simplicity and immediate responsiveness over persistence, making it suitable for temporary task management within a single session.
 

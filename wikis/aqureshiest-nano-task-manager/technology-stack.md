@@ -10,15 +10,13 @@ description: reference documentation
       📚 <strong>Reference</strong>
     </span>
     <span style="display: flex; align-items: center; gap: 0.25rem;">
-      📝 <strong>449</strong> words
+      📝 <strong>447</strong> words
     </span>
     <span style="display: flex; align-items: center; gap: 0.25rem;">
       ⏱️ <strong>3</strong> min read
     </span>
   </div>
 </div>
-
-# Technology Stack
 
 Nano Task Manager is built on a deliberately minimal technology stack designed for simplicity and rapid development. The project uses only essential technologies with no build tools, bundlers, or databases.
 

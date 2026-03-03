@@ -10,15 +10,13 @@ description: guide documentation
       📖 <strong>Guide</strong>
     </span>
     <span style="display: flex; align-items: center; gap: 0.25rem;">
-      📝 <strong>630</strong> words
+      📝 <strong>628</strong> words
     </span>
     <span style="display: flex; align-items: center; gap: 0.25rem;">
       ⏱️ <strong>4</strong> min read
     </span>
   </div>
 </div>
-
-# Backend Implementation
 
 The Nano Task Manager backend is a minimal Flask application that serves a single-page frontend and provides a RESTful API for task management. All backend logic is contained in a single `app.py` file with no external configuration files or environment variables.
 

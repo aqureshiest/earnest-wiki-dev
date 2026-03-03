@@ -10,15 +10,13 @@ description: reference documentation
       📚 <strong>Reference</strong>
     </span>
     <span style="display: flex; align-items: center; gap: 0.25rem;">
-      📝 <strong>304</strong> words
+      📝 <strong>302</strong> words
     </span>
     <span style="display: flex; align-items: center; gap: 0.25rem;">
       ⏱️ <strong>2</strong> min read
     </span>
   </div>
 </div>
-
-# Data Model
 
 The task object is the core data structure in nano-task-manager. This page describes its schema, storage mechanism, and lifecycle.
 

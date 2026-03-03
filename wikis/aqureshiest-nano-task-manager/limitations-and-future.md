@@ -10,15 +10,13 @@ description: reference documentation
       📚 <strong>Reference</strong>
     </span>
     <span style="display: flex; align-items: center; gap: 0.25rem;">
-      📝 <strong>797</strong> words
+      📝 <strong>794</strong> words
     </span>
     <span style="display: flex; align-items: center; gap: 0.25rem;">
       ⏱️ <strong>4</strong> min read
     </span>
   </div>
 </div>
-
-# Limitations & Considerations
 
 Nano Task Manager is an **educational and demonstration project** designed to illustrate core web application concepts. It intentionally prioritizes simplicity and clarity over production-readiness. This page documents the current limitations and areas where the project could be extended.
 
