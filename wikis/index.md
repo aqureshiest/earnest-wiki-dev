@@ -108,15 +108,3 @@ import { withBase } from 'vitepress'
   }
 }
 </style>
-
-
-### [aqureshiest/nano-task-manager](./aqureshiest-nano-task-manager/)
-**Repository:** [aqureshiest/nano-task-manager](https://github.com/aqureshiest/nano-task-manager)
-
-# Nano Task Manager - Repository Knowledge
-
-## Project Identity
-Minimal educational task management web app demonstrating basic Flask + vanilla JS architecture.
-
----
-
