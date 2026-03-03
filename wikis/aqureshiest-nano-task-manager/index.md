@@ -1,4 +1,4 @@
-# aqureshiest/nano-task-manager Documentation
+#  Documentation: aqureshiest/nano-task-manager
 
 This documentation was automatically generated from the repository codebase.
 
@@ -9,25 +9,19 @@ This documentation was automatically generated from the repository codebase.
 - **Generated**: 3/3/2026
 - **Total Pages**: 9
 
-## Quick Links
+
+## Pages
 
 - [Project Overview](./overview.md)
-- [Backend Implementation](./backend-structure.md)
+- [Data Model](./data-model.md)
 - [Architecture & Design](./architecture.md)
 - [API Reference](./api-reference.md)
-
-## All Pages
-
-- [Project Overview](./overview.md) - overview
-- [Data Model](./data-model.md) - reference
-- [Architecture & Design](./architecture.md) - architecture
-- [API Reference](./api-reference.md) - api
-- [Getting Started](./getting-started.md) - tutorial
-- [Technology Stack](./technology-stack.md) - reference
-- [Backend Implementation](./backend-structure.md) - guide
-- [Frontend Implementation](./frontend-structure.md) - guide
-- [Limitations & Considerations](./limitations-and-future.md) - reference
+- [Getting Started](./getting-started.md)
+- [Technology Stack](./technology-stack.md)
+- [Backend Implementation](./backend-structure.md)
+- [Frontend Implementation](./frontend-structure.md)
+- [Limitations & Considerations](./limitations-and-future.md)
 
 ---
 
-*This documentation was generated using [Earnest AI Tools](https://github.com/meetearnest/earnest-ai-tools)*
+*This documentation was generated using [Earnest AI Tools](https://earnest-ai-tools.staging.earnest.com/wiki-agent)*

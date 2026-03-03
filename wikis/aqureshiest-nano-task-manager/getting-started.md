@@ -10,15 +10,13 @@ description: tutorial documentation
       🎓 <strong>Tutorial</strong>
     </span>
     <span style="display: flex; align-items: center; gap: 0.25rem;">
-      📝 <strong>489</strong> words
+      📝 <strong>487</strong> words
     </span>
     <span style="display: flex; align-items: center; gap: 0.25rem;">
       ⏱️ <strong>3</strong> min read
     </span>
   </div>
 </div>
-
-# Getting Started
 
 This guide walks you through running the Nano Task Manager application in minutes. The application is a lightweight, in-memory task management system with no external database dependencies.
 
