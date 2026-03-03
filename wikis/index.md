@@ -17,3 +17,12 @@ Minimal educational task management web app demonstrating basic Flask + vanilla 
 
 ---
 
+
+
+### [meetearnest/pricing-service-v2](./meetearnest-pricing-service-v2/)
+**Repository:** [meetearnest/pricing-service-v2](https://github.com/meetearnest/pricing-service-v2)
+
+Comprehensive documentation for this repository.
+
+---
+
