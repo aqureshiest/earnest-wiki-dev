@@ -155,7 +155,6 @@ export default withMermaid(
 
       footer: {
         message: "Generated with Earnest AI Tools",
-        copyright: "Copyright © 2024-present",
       },
     },
   }),
