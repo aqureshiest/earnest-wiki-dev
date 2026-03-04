@@ -1,0 +1,97 @@
+# LoanFlow Repository Knowledge Dump
+
+## Project Identity
+LoanFlow is a personal loan application platform - a single-page React application implementing a multi-step form flow for loan applications. Built with React 18, TypeScript, and Vite.
+
+## Architecture Patterns
+
+### Page-Based Linear Flow
+- 8 sequential routes representing loan application steps
+- No complex routing - linear progression from landing → success
+- Routes defined in src/App.tsx using React Router v6
+- Entry point: src/main.tsx → src/App.tsx
+
+### State Management Approach
+**Critical insight**: No global state management library used
+- Each page component manages its own form state via useState
+- Form data is NOT persisted between pages (potential data loss on refresh)
+- Navigation handled via React Router's useNavigate hook
+- No context providers, Redux, Zustand, or similar solutions observed
+
+### Component Architecture
+- shadcn/ui components in src/components/ui/ (Radix UI + Tailwind)
+- Custom components: ProgressBar (src/components/ProgressBar.tsx)
+- Components are self-contained, no complex prop drilling observed
+
+## Key Technical Decisions
+
+### Validation Strategy
+- Client-side only, no backend integration observed
+- Simple empty-field checks in handleNext functions
+- No validation library (Zod, Yup, etc.) - manual validation
+- Example: PersonalInfoPage.tsx checks all fields are non-empty before navigation
+
+### Styling System
+- Tailwind CSS with CSS variables for theming
+- Base color: slate
+- Global styles in src/index.css with CSS custom properties
+- Configuration: tailwind.config.js, components.json
+
+### Build Configuration
+- Vite with React plugin
+- Path alias: @ → src/
+- Production: tsc (type check) → vite build
+- No environment variable configuration observed
+- No API endpoints or backend integration
+
+## File Organization
+```
+src/
+├── main.tsx (entry point)
+├── App.tsx (router configuration)
+├── pages/ (8 page components)
+├── components/
+│   ├── ui/ (shadcn/ui components)
+│   └── ProgressBar.tsx
+├── hooks/ (use-toast.ts)
+└── lib/ (utils.ts - cn helper)
+```
+
+## Important Gaps & Assumptions
+1. **No data persistence**: Form data not saved between pages or on refresh
+2. **No backend**: No API calls, fetch, axios, or backend integration observed
+3. **No authentication**: No login, user management, or protected routes
+4. **No testing**: No test files or testing configuration found
+5. **No error handling**: No error boundaries or comprehensive error handling
+6. **Production readiness**: Appears to be a prototype/demo rather than production application
+
+## Development Workflow
+- npm install → npm run dev (Vite dev server on port 5173)
+- npm run build → production build in dist/
+- No linting configuration observed (no ESLint config)
+- No pre-commit hooks or CI/CD configuration
+
+## Dependencies of Note
+- React Router DOM v6 for routing
+- Radix UI primitives for accessible components
+- Lucide React for icons
+- class-variance-authority for component variants
+- clsx + tailwind-merge for className utilities
+
+## Extension Points
+To make production-ready, would need:
+1. Global state management (Context API, Zustand, or Redux)
+2. Form data persistence (localStorage, sessionStorage, or backend)
+3. Backend API integration for loan submission
+4. Robust validation library (Zod, React Hook Form)
+5. Error handling and loading states
+6. Authentication and authorization
+7. Testing infrastructure
+8. Environment configuration
+
+## Naming Conventions
+- Components: PascalCase with descriptive names (PersonalInfoPage, ProgressBar)
+- Files: Match component names
+- Hooks: use-* pattern (use-toast.ts)
+- Utilities: kebab-case (utils.ts)
+- CSS: Tailwind utility classes, no custom CSS modules
