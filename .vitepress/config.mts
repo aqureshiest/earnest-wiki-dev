@@ -75,6 +75,72 @@ export default withMermaid(
                   ],
                   'collapsed': false
             }
+      ],
+      '/wikis/aqureshiest-loanflow/': [
+            {
+                  'text': 'Getting Started',
+                  'items': [
+                        {
+                              'text': 'LoanFlow Overview',
+                              'link': '/wikis/aqureshiest-loanflow//overview'
+                        },
+                        {
+                              'text': 'Technology Stack',
+                              'link': '/wikis/aqureshiest-loanflow//tech-stack'
+                        }
+                  ],
+                  'collapsed': false
+            },
+            {
+                  'text': 'Architecture',
+                  'items': [
+                        {
+                              'text': 'Application Architecture',
+                              'link': '/wikis/aqureshiest-loanflow//application-architecture'
+                        },
+                        {
+                              'text': 'Application Routes',
+                              'link': '/wikis/aqureshiest-loanflow//application-routes'
+                        },
+                        {
+                              'text': 'State Management',
+                              'link': '/wikis/aqureshiest-loanflow//state-management'
+                        },
+                        {
+                              'text': 'Form Validation',
+                              'link': '/wikis/aqureshiest-loanflow//form-validation'
+                        }
+                  ],
+                  'collapsed': false
+            },
+            {
+                  'text': 'UI & Styling',
+                  'items': [
+                        {
+                              'text': 'UI Components',
+                              'link': '/wikis/aqureshiest-loanflow//ui-components'
+                        },
+                        {
+                              'text': 'Styling and Theming',
+                              'link': '/wikis/aqureshiest-loanflow//styling-theming'
+                        }
+                  ],
+                  'collapsed': false
+            },
+            {
+                  'text': 'Development',
+                  'items': [
+                        {
+                              'text': 'Build Configuration',
+                              'link': '/wikis/aqureshiest-loanflow//build-configuration'
+                        },
+                        {
+                              'text': 'Development Setup',
+                              'link': '/wikis/aqureshiest-loanflow//development-setup'
+                        }
+                  ],
+                  'collapsed': false
+            }
       ]
       },
 

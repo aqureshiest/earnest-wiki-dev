@@ -12,6 +12,16 @@ export interface WikiMetadata {
 
 export const wikis: WikiMetadata[] = [
   {
+    "slug": "aqureshiest-loanflow",
+    "owner": "aqureshiest",
+    "repo": "loanflow",
+    "title": "aqureshiest/loanflow",
+    "description": "# LoanFlow Repository Knowledge Dump\n\n## Project Identity\nLoanFlow is a personal loan application platform - a single-page React application implementing a multi-step form flow for loan applications.",
+    "generatedAt": "2026-03-04",
+    "pageCount": 10,
+    "url": "/wikis/aqureshiest-loanflow/"
+  },
+  {
     "slug": "aqureshiest-nano-task-manager",
     "owner": "aqureshiest",
     "repo": "nano-task-manager",
