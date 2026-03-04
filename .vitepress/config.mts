@@ -20,15 +20,15 @@ export default withMermaid(
                   'items': [
                         {
                               'text': 'Project Overview',
-                              'link': '/wikis/aqureshiest-nano-task-manager//overview'
+                              'link': '/wikis/aqureshiest-nano-task-manager/overview'
                         },
                         {
                               'text': 'Getting Started',
-                              'link': '/wikis/aqureshiest-nano-task-manager//getting-started'
+                              'link': '/wikis/aqureshiest-nano-task-manager/getting-started'
                         },
                         {
                               'text': 'Limitations & Considerations',
-                              'link': '/wikis/aqureshiest-nano-task-manager//limitations-and-future'
+                              'link': '/wikis/aqureshiest-nano-task-manager/limitations-and-future'
                         }
                   ],
                   'collapsed': false
@@ -38,15 +38,15 @@ export default withMermaid(
                   'items': [
                         {
                               'text': 'Architecture & Design',
-                              'link': '/wikis/aqureshiest-nano-task-manager//architecture'
+                              'link': '/wikis/aqureshiest-nano-task-manager/architecture'
                         },
                         {
                               'text': 'Data Model',
-                              'link': '/wikis/aqureshiest-nano-task-manager//data-model'
+                              'link': '/wikis/aqureshiest-nano-task-manager/data-model'
                         },
                         {
                               'text': 'Technology Stack',
-                              'link': '/wikis/aqureshiest-nano-task-manager//technology-stack'
+                              'link': '/wikis/aqureshiest-nano-task-manager/technology-stack'
                         }
                   ],
                   'collapsed': false
@@ -56,7 +56,7 @@ export default withMermaid(
                   'items': [
                         {
                               'text': 'API Reference',
-                              'link': '/wikis/aqureshiest-nano-task-manager//api-reference'
+                              'link': '/wikis/aqureshiest-nano-task-manager/api-reference'
                         }
                   ],
                   'collapsed': false
@@ -66,11 +66,11 @@ export default withMermaid(
                   'items': [
                         {
                               'text': 'Backend Implementation',
-                              'link': '/wikis/aqureshiest-nano-task-manager//backend-structure'
+                              'link': '/wikis/aqureshiest-nano-task-manager/backend-structure'
                         },
                         {
                               'text': 'Frontend Implementation',
-                              'link': '/wikis/aqureshiest-nano-task-manager//frontend-structure'
+                              'link': '/wikis/aqureshiest-nano-task-manager/frontend-structure'
                         }
                   ],
                   'collapsed': false
