@@ -1,0 +1,153 @@
+# data-airflow-dags Repository Knowledge Dump
+
+## Repository Identity
+Apache Airflow-based data orchestration platform for Earnest, managing ETL pipelines and DBT transformations across multiple data sources and warehouses.
+
+## Core Architecture Patterns
+
+### Team-Based Organization
+- **dags/** organized by team: data_team, data_platform_team, servicing_team, security_team
+- Each team has subdirectories: extract/, transform/, custom_scripts/, maintenance/
+- Common infrastructure in dags/common/ shared across all teams
+
+### DAG Creation Framework
+- **dag_builder.py** provides standardized DAG creation via airflow_DAG() function
+- Specialized builders: dbt_dag_builder, emr_dag_builder, ml_training_dag_builder
+- All DAGs use common patterns for configuration, error handling, and Slack notifications
+
+### DBT Integration Model
+- DBT project embedded in dbt/ directory with dbt_project.yml
+- Models organized by team and domain (data_team/, data_platform_team/)
+- Airflow DAGs execute DBT via BashOperator calling dbt commands
+- Dynamic task generation using get_dbt_tasks() helper
+- Profiles in profiles/snowflake/ for connection management
+- Artifacts generated via bin/generate_artifacts.sh for different selectors (twice_daily, nightly, weekly)
+
+### Database Abstraction
+- **dags/common/db/db.py** provides unified interface for SQL execution
+- Supports pandas DataFrame operations (read_sql, to_sql)
+- Connection management via Airflow connections or Vault
+- Used across all DAGs for database interactions
+
+## Key Technical Decisions
+
+### Execution Model
+- CeleryExecutor for distributed task execution
+- Redis as Celery broker and result backend
+- PostgreSQL for Airflow metadata
+- Vault for secrets management (VAULT_URL, VAULT_PORT, VAULT_TOKEN, VAULT_KEY)
+
+### Data Flow Patterns
+1. **Extract**: Source → S3 (Parquet) via custom Python scripts
+2. **Transform**: DBT models in Snowflake/Redshift
+3. **Load**: Final tables in data warehouses
+4. **Incremental**: Watermark tracking for incremental loads (observed in agiloft_dags.py)
+
+### Environment Tiers
+- dev, stage, prod environments for DBT
+- Environment-specific Snowflake schemas
+- Configuration via dags/common/utils/config.py
+
+## Critical File Relationships
+
+### DAG Dependencies
+- ExternalTaskSensor used for cross-DAG dependencies
+- TriggerDagRunOperator for programmatic DAG triggering
+- Watermark tables track incremental load state
+
+### Configuration Chain
+1. dags/common/utils/config.py → Environment variables
+2. Vault → Secrets (credentials, API keys)
+3. Airflow Connections → Database/service credentials
+4. dbt/profiles/snowflake/ → DBT connection profiles
+
+### Import Patterns
+- All DAGs import from dags.common.dag_builder
+- Database operations import from dags.common.db.db
+- Utilities import from dags.common.utils
+- Team-specific scripts in dags/scripts/{team}/
+
+## External System Integration Points
+
+### Data Sources
+- **Agiloft**: REST API extraction (dags/data_platform_team/extract/agiloft_dags.py)
+- **Mohela/Impala**: Spark jobs for historical data (dags/data_platform_team/extract/spark_jobs/)
+- **Amundsen**: Metadata extraction (dags/data_platform_team/extract/amundsen_jobs/)
+- **Braze**: Marketing platform integration (dags/data_team/custom_scripts/braze_v3/)
+- **Finwise**: Loan servicing (dags/data_team/custom_scripts/finwise/)
+- **Zendesk**: Support data (dags/data_team/custom_scripts/zendesk/)
+- **Tenable**: Security scanning (dags/security_team/tenable/)
+
+### Data Destinations
+- **Snowflake**: Primary data warehouse (via Okta authentication)
+- **Redshift**: Legacy data warehouse
+- **S3**: Intermediate storage (Parquet format)
+
+## Deployment Architecture
+
+### Local Development
+- docker-compose.yml with PostgreSQL, Redis, Vault
+- Airflow webserver, scheduler, worker containers
+- Volume mounts for dags/, plugins/, logs/
+
+### Kubernetes Deployment
+- Helm charts in k8s_local_deployment/
+- airflow-values-dev.yaml for configuration
+- KubernetesPodOperator for isolated task execution
+
+### CI/CD
+- Jenkinsfile (currently inactive/commented)
+- scripts/ci/deploy for environment deployment
+- Docker image building for data-dbt service
+
+## Testing Strategy
+- Unit tests in tests/unit/ mirror source structure
+- unittest.mock for dependency mocking
+- Test files prefixed with test_
+- Focus on business logic, not Airflow framework
+
+## Common Pitfalls & Assumptions
+
+### Assumptions Made
+- Vault is always available for secrets
+- Snowflake uses Okta authentication
+- S3 buckets follow naming convention: earnest-data-{environment}
+- DBT artifacts must be regenerated after model changes
+
+### Known Patterns
+- All DAGs should use dag_builder.airflow_DAG() for consistency
+- Database connections via db.py abstraction, not direct connections
+- Environment variables loaded via config.py, not os.getenv()
+- Slack notifications configured in dag_builder
+
+### Migration Context
+- docs/dagster_to_airflow.md indicates migration from Dagster
+- Some legacy patterns may exist from previous orchestration system
+- RFC documents in docs/rfc/ describe architectural decisions
+
+## Maintenance Operations
+
+### Regular Tasks
+- db_cleanup.py: Airflow metadata cleanup
+- dbt_ad_hoc_dag.py: Manual DBT runs
+- navient_mohela_snowflake_record_count.py: Data quality checks
+
+### Artifact Management
+- bin/generate_artifacts.sh regenerates DBT artifacts
+- Artifacts stored for different run schedules (twice_daily, nightly, weekly)
+- manifest.json copied for Airflow parsing
+
+## Documentation Locations
+- docs/dags_development.md: DAG development guidelines
+- docs/dbt_deployment_guidelines.md: DBT deployment process
+- docs/kubernetes_operator_local.md: K8s operator setup
+- docs/rfc/: Architecture decision records
+- Team-specific READMEs in dags/scripts/{team}/
+
+## Future Agent Guidance
+- Always check dags/common/ for reusable utilities before creating new ones
+- Follow team-based organization when adding new DAGs
+- Use dag_builder framework for consistency
+- Consult docs/rfc/ for context on architectural decisions
+- Test locally via docker-compose before deployment
+- Regenerate DBT artifacts after model changes
