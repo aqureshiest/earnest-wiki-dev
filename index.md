@@ -14,7 +14,7 @@ hero:
       link: /wikis/
     - theme: alt
       text: Generate Wiki
-      link: https://github.com/meetearnest/earnest-ai-tools
+      link: https://earnest-ai-tools.staging.earnest.com/wiki-agent
 ---
 
 <script setup>
@@ -69,7 +69,7 @@ import { withBase } from 'vitepress'
 
 <div v-else class="no-wikis">
   <p>No wikis have been published yet.</p>
-  <p class="help-text">Use the <a href="https://github.com/meetearnest/earnest-ai-tools">Earnest AI Tools Wiki Agent</a> to generate comprehensive documentation!</p>
+  <p class="help-text">Use the <a href="https://earnest-ai-tools.staging.earnest.com/wiki-agent">Earnest AI Tools Wiki Agent</a> to generate comprehensive documentation!</p>
 </div>
 
 </div>
