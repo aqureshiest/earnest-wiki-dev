@@ -12,6 +12,16 @@ export interface WikiMetadata {
 
 export const wikis: WikiMetadata[] = [
   {
+    "slug": "meetearnest-data-airflow-dags",
+    "owner": "meetearnest",
+    "repo": "data-airflow-dags",
+    "title": "meetearnest/data-airflow-dags",
+    "description": "# data-airflow-dags Repository Knowledge Dump\n\n## Repository Identity\nApache Airflow-based data orchestration platform for Earnest, managing ETL pipelines and DBT transformations across multiple data sources and warehouses.",
+    "generatedAt": "2026-03-05",
+    "pageCount": 24,
+    "url": "/wikis/meetearnest-data-airflow-dags/"
+  },
+  {
     "slug": "aqureshiest-loanflow",
     "owner": "aqureshiest",
     "repo": "loanflow",
